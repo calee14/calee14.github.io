@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>Cap's Magical Website!</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+        
+        <link href="//d14nx13ylsx7x8.cloudfront.net/repo_assets/assets/000/001/763/original/C-Fire-Letters-Hd-Wallpaper-270x170.jpg" rel="icon" type="image/x-icon" />
+    </head>
+    
+    <body>  <!--first body--> 
+    <div class="main-container" id="cap">
+        <nav id="nav-bar">
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="scratch.html">Scratch Games</a></li>
+                <li><a href="Survey.html">Survey</a></li>
+            </ul>
+        </nav>  
+        
+        
+        <h1>Hi, I'm Cap!</h1>
+        <h1><font>This is my Survey</font></h1>
+        <h1><font>Please Rate This Website</font></h1>
+        
+        <div class="container" id="cap1">
+            <div class="row">
+                
+                <div class="one-half">
+                    <h2>About</h2>
+                    <p>This is a column that containes some great info about my site.
+                       It will help me protray my website's purpose. I should write 
+                       some very thoughtful information here that helps the user understand
+                       how this website is the best.
+                    </p>
+                </div>
+                
+                <div class="one-half">
+                    <h2>HTML &amp; CSS</h2>
+                    <p>This website was developed with HTML; CSS code.
+                        It was made by me during an Advanced Web Develpment
+                        period in my life.
+                    </p>
+                </div>
+            </div>
+            
+                <div class="container">
+        <div class="row">
+            
+            <form onsubmit="return results();" method="post" action="mailto:me@mysite.com">
+            
+            <h3>Enter Name</h3>
+            <input id="name" type="text" name="name" />
+            
+            <h3>Enter Email</h3>    
+            <input id="email" type="text" name="email" />
+            
+            <h3>How do you like my website</h3>
+            
+            <p><input id="poll1" type="radio" name="website_poll" value="Love it!!!" /> Love it!!!</p>
+            <p><input id="poll2" type="radio" name="website_poll" value="Like it" /> Like it.</p> 
+            <p><input id="poll3" type="radio" name="website_poll" value="Sucks!!!" /> Sucks!!! </p>
+            
+            <h3>Leave a Comment</h3>
+            
+            <textarea id="comments" name="comments" rows="6" cols="40" maxlength="250">
+                Your message here.
+            </textarea>
+            
+            <br/>
+            <br/>
+            <input id="submit" type="submit" value="Send Form Data Now" />
+            </form>
+            
+            <script>
+                
+                function results() {
+                    var name = document.getElementById('name').value;
+                    var email = document.getElementById('email').value;
+                    
+                    if (document.getElementById('poll1').checked) {
+                        
+                        poll = document.getElementById('poll1').value;
+                        
+                    } else if(document.getElementById('poll2').checked) {
+                        
+                        poll = document.getElementById('poll2').value;
+                        
+                    } else {
+                        
+                        poll = document.getElementById('poll3').value;
+                    }
+                    
+                    var comments = document.getElementById('comments').value;
+                    
+                    document.write("<h1>Thank You</h1>");
+                    document.write("<p>Now, your data will send via email.</p>");
+                    
+                    document.write("<h3>Here is your data:</h3>");
+                    
+                    document.write(name + "<br/>");
+                    document.write(email + "<br/>");
+                    document.write(poll + "<br/>");
+                    document.write(comments + "<br/>");
+                }
+            </script>
+            
+        </div>
+    </div> <!--End of Form -->
+            
+        
+        </body>
