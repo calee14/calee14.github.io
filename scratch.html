@@ -290,10 +290,402 @@
             var processingInstance = new Processing(canvas, sketchProc);
  
             </script>
-            <!-- End of Snake -->
         </div>
         </div>
+        <!-- End of Snake -->
+        <!--JavaScript Game2 Snake -->
+        <div class="row">
+        <div id="javascipt-games" class="container">
+        <h2 id="cap2">JavaScript Game2 MazeRunner</h2>
+        <canvas id="mycanvas2"></canvas>
+        <script>
+            var sketchProc = function(processingInstance) {
+                with (processingInstance) {
+            size(1000,1000);
+
+            var x = 50;
+            var y = 50;
+            var up = 0;
+            var down = 0;
+            var left = 0;
+            var right = 0;
+            var letterB = 0;
             
+            var player = {x: 500, y: 900 ,w: 30, h: 30};
+            
+            var goldPoints = 0;
+            
+            class bounceMaster {
+               constructor(xAxis,yAxis,height,width,axis,spd){
+               this.x = xAxis;
+               this.y = yAxis;
+               this.h = height;
+               this.w = width;
+               this.axis = axis;
+               this.spd = spd;
+               }
+               
+              getSpeed()
+              {
+                return this.spd;
+              }
+              setSpeed(speed)
+              {
+                this.spd = speed;
+              }
+              reverseSpeed()
+              {
+                this.spd = this.spd * -1;
+              }
+              
+            }
+            class wall {
+              constructor(xAxis, yAxis, width, height,color) {
+              this.x = xAxis;
+              this.y = yAxis;
+              this.h = height;
+              this.w = width;
+              this.color = color;
+              }
+              
+            }
+            
+            class yellowStuff {
+              constructor(xAxis, yAxis, width, height, show) {
+                this.x = xAxis;
+                this.y = yAxis;
+                this.h = height;
+                this.w = width;
+                this.show = show;
+              }
+            }
+            
+            var instance = new bounceMaster(100,100,30*3,30*2,"hor",1);
+            
+            //                 {x: 460, y: 800, w: 30, h: 30, spd: 5, axis: "vert"},
+            //                 {x: 380, y: 810, w: 30, h: 30, spd: 5, axis: "vert"},
+            //                 {x: 540, y: 800, w: 30, h: 30, spd: 5, axis: "vert"},
+            //                 {x: 620, y: 810, w: 30, h: 30, spd: 5, axis: "vert"},
+            //                 {x: 200, y: 800, w: 30, h: 30, spd: 10,axis: "hor"},
+            //                 {x: 900, y: 800, w: 30, h: 30, spd: 10,axis: "hor"}];
+            //Bouncers
+            var bouncers = [];
+            bouncers.push(new bounceMaster(460,800,30,30,"vert",5));
+            bouncers.push(new bounceMaster(380,810,30,30,"vert",5));
+            bouncers.push(new bounceMaster(540,800,30,30,"vert",5));
+            bouncers.push(new bounceMaster(620,810,30,30,"vert",5));
+            bouncers.push(new bounceMaster(200,800,30,30,"hor",10));
+            bouncers.push(new bounceMaster(900,800,30,30,"hor",10));
+            
+            // var blackWall = [{x: 350,y: 730,h: 25,w: 300},
+            //             {x: 300,y: 780,h: 50,w: 25 },
+            //             {x: 700,y: 780,h: 50,w: 25 }];
+            //BlackWalls
+            
+            
+            // var walls = [{x: 0,   y: 0,   w: 1000, h: 50 },
+            //             {x: 0,   y: 0,   w: 50,  h: 1000},
+            //             {x: 0,   y: 950, w: 1000, h: 50 },
+            //             {x: 950, y: 0,   w: 50,  h: 1000},
+            //             {x: 415,  y: 840, w: 40, h: 40 },
+            //             {x: 335,  y: 860, w: 40, h: 40 },
+            //             {x: 655,  y: 860, w: 40, h: 40 },
+            //             {x: 495, y: 840, w: 40, h: 40 },
+            //             {x: 575, y: 840, w: 40, h: 40 },
+            //             {x: 200, y: 200, w: 100, h: 100},
+            //             {x: 100, y: 300, w: 40,  h: 40 },
+            //             {x: 850, y: 750, w: 40,  h: 40},
+            //             {x: 500, y: 640, w: 150, h: 40},
+            //             {x: 300, y: 490, w: 150, h: 40}];
+            //Walls
+            var walls = [];
+            walls.push(new wall(350,730,300,25,"b"));
+            walls.push(new wall(300,780,25,50,"b"));
+            walls.push(new wall(700,780,25,50,"b"));
+            walls.push(new wall(0,0,1000,50,"r"));
+            walls.push(new wall(0,0,50,1000, "r"));
+            walls.push(new wall(0,950,1000,50, "r"));
+            walls.push(new wall(950,0,50,1000, "r"));
+            walls.push(new wall(415,840,40,40,"r"));
+            walls.push(new wall(335,860,40,40,"r"));
+            walls.push(new wall(665,860,40,40,"r"));
+            walls.push(new wall(495,840,40,40,"r"));
+            walls.push(new wall(575,840,40,40,"r"));
+            walls.push(new wall(200,200,100,100,"r"));
+            walls.push(new wall(100,300,40,40,"r"));
+            walls.push(new wall(850,750,40,40,"r"));
+            walls.push(new wall(500,640,150,40,"r"));
+            walls.push(new wall(300,490,150,40,"r"));
+            
+            // var gold = [{x: 275, y: 185, w: 10, h: 10, show: 1},
+            //             {x: 215, y: 185, w: 10, h: 10, show: 1},
+            //             {x: 245, y: 185, w: 10, h: 10, show: 1},
+            //             {x: 185, y: 215, w: 10, h: 10, show: 1},
+            //             {x: 185, y: 245, w: 10, h: 10, show: 1},
+            //             {x: 185, y: 275, w: 10, h: 10, show: 1},
+            //             {x: 305, y: 215, w: 10, h: 10, show: 1},
+            //             {x: 305, y: 245, w: 10, h: 10, show: 1},
+            //             {x: 305, y: 275, w: 10, h: 10, show: 1},
+            //             {x: 275, y: 305, w: 10, h: 10, show: 1},
+            //             {x: 245, y: 305, w: 10, h: 10, show: 1},
+            //             {x: 215, y: 305, w: 10, h: 10, show: 1}];
+            //Gold
+            var gold = [];
+            gold.push(new yellowStuff(275,185,10,10,1));
+            gold.push(new yellowStuff(215,185,10,10,1));
+            gold.push(new yellowStuff(245,185,10,10,1));
+            gold.push(new yellowStuff(185,215,10,10,1));
+            gold.push(new yellowStuff(185,245,10,10,1));
+            gold.push(new yellowStuff(185,275,10,10,1));
+            gold.push(new yellowStuff(305,215,10,10,1));
+            gold.push(new yellowStuff(305,245,10,10,1));
+            gold.push(new yellowStuff(305,275,10,10,1));
+            gold.push(new yellowStuff(275,305,10,10,1));
+            gold.push(new yellowStuff(245,305,10,10,1));
+            gold.push(new yellowStuff(215,305,10,10,1));
+            
+            
+             var collision = function(obj1, obj2) {
+              
+                 if ( obj1.x + obj1.w > obj2.x &&
+                   obj1.x < obj2.x + obj2.w &&
+                   obj2.y + obj2.h > obj1.y &&
+                   obj2.y < obj1.y + obj1.h ) {
+                        return true;
+                     
+             } else {
+               return false;
+             } 
+            };
+            
+            
+            var draw = function() {
+              background (51,255,51);
+              
+              //noStroke(0);
+              
+              Walls();
+              
+              Gold();
+              
+              move(player, 7);
+              
+              Player();
+              
+              Goldpoints();
+              
+              Bouncers();
+              
+              
+              
+            };
+              var Bouncers = function () {
+              fill(5,15,200);
+              rect(instance.x, instance.y, instance.h, instance.w);
+              for (var i = 0; i < bouncers.length ; i++) {
+                rect(bouncers[i].x, bouncers[i].y, bouncers[i].w, bouncers[i].h);
+                }
+              
+              for (var t = 0; t < bouncers.length; t++){
+                for (var j = 0; j < walls.length; j++) {
+                   if (collision(walls[j],instance)) {
+                    instance.reverseSpeed();
+                  }
+                  if (collision(walls[j],bouncers[t])) {
+                    bouncers[t].spd = bouncers[t].spd * - 1;
+                  }
+                }
+                
+                if (bouncers[t].axis == "hor") {
+                  bouncers[t].x = bouncers[t].x 
+                                        + bouncers[t].spd;
+                }else if (bouncers[t].axis == "vert"){
+                  bouncers[t].y = bouncers[t].y 
+                                        + bouncers[t].spd;
+                } 
+                if (instance.axis == "hor") {
+                  instance.x = instance.x 
+                                        + instance.spd;
+                } else if (instance.axis == "vert") {
+                  instance.y = instance.y
+                                        + instance.spd;
+                }
+                if (collision(bouncers[t],player)||(collision(instance, player))) {
+                  reset();
+                }
+              }
+            };
+              var Walls = function() {
+                 
+              for (var i = 0; i < walls.length ; i++) {
+                if(walls[i].color == "b") {
+                  fill(0,0,0);
+                } else if (walls[i].color == "r") {
+                  fill(205,0,0);
+                }
+                rect(walls[i].x, walls[i].y, walls[i].w, walls[i].h);
+                
+                }
+              };
+            
+              var Player = function() {
+               
+                fill (175,30,44);
+                  rect(player.x, player.y, player.w, player.h);
+                };
+                
+              var Gold = function(){
+                fill(255,244,0);
+            
+                for (var j = 0; j < gold.length ; j++) {
+                  if (gold[j].show == 1)
+                    rect(gold[j].x, gold[j].y, gold[j].w, gold[j].h);
+                }
+              };
+              var Goldpoints = function(){
+                fill(0);
+                  textSize(14);
+                  text("Gold: " + goldPoints, 10, 990);
+              };
+              
+              var move = function(player,speed) {
+              
+              if (up == 1) { 
+                player.y = player.y - speed;
+                
+                for (var i = 0; i < walls.length; i ++) {
+                  while (collision(player,walls[i]) && walls[i].color=="r") {
+                    player.y = player.y + 1;
+                  }
+              }
+                for (var a = 0; a < gold.length; a ++) {
+                  if (collision(player,gold[a])) {
+                    if (gold[a].show == 1)
+                      goldPoints = goldPoints + 1;
+                    gold[a].show = 0; 
+                    
+                }
+              }
+            }
+            if (down == 1) {
+              player.y = player.y + speed;
+              
+              for (var k = 0; k < walls.length; k++) {
+                  while (collision(player, walls[k]) && walls[k].color =="r") {
+                    player.y = player.y - 1;
+                }
+              }
+              
+               for (var w = 0; w < gold.length; w ++) {
+                  if (collision(player,gold[w])) {
+                    if (gold[w].show == 1)
+                      goldPoints = goldPoints + 1;
+                    gold[w].show = 0; 
+                    
+                }
+              }
+            }
+            if (left == 1) {
+              player.x = player.x - speed;
+              
+              for (var c = 0; c < walls.length; c++) {
+                  while (collision(player, walls[c]) && walls[c].color=="r") {
+                    player.x = player.x + 1;
+                }
+              }
+              
+              for (var r = 0; r < gold.length; r ++) {
+                  if (collision(player,gold[r])) {
+                    if (gold[r].show == 1)
+                      goldPoints = goldPoints + 1;
+                    gold[r].show = 0; 
+                    
+                 }
+              }
+            }
+            
+            if (right == 1) {
+              player.x = player.x + speed;
+              
+               for (var e = 0; e < walls.length; e ++) {
+                  while (collision(player, walls[e]) && (walls[e].color=="r")) {
+                    player.x = player.x - 1;
+                }
+              }
+              
+              for (var t = 0; t < gold.length; t ++) {
+                  if (collision(player,gold[t])) {
+                    if (gold[t].show == 1)
+                      goldPoints = goldPoints + 1;
+                    gold[t].show = 0; 
+                    
+                 }
+              }
+              
+            }
+            if(letterB == 1) {
+                player.x = 100;
+                player.y = 100;
+              }
+              
+            };
+            var reset = function() {
+              player.x = 500;
+              player.y = 900;
+              for (var t = 0; t < gold.length; t ++) {
+                    if (gold[t].show === 0)
+                      goldPoints = goldPoints + 1;
+                    gold[t].show = 1;
+                  }
+              goldPoints = 0;
+            };
+            
+            
+            var keyPressed = function() {
+              if (keyCode == LEFT) {
+                left = 1;
+              }
+              if (keyCode == RIGHT) {
+                right = 1;
+              }
+              if (keyCode == UP) {
+                up = 1;
+              }
+              if (keyCode == DOWN) {
+                down = 1;
+              }
+              if (keyCode == ENTER){
+                letterB = 1;
+              }
+            };
+            
+            var keyReleased = function() {
+              if (keyCode == LEFT) {
+                left = 0;
+              }
+              if (keyCode == RIGHT) {
+                right = 0;
+              }
+              if (keyCode == UP) {
+                up = 0;
+              }
+              if (keyCode == DOWN) { 
+                down = 0;
+              }
+              if (keyCode == ENTER){
+                letterB = 0;
+              }
+            };
+            };
+            };
+            var canvas2 = document.getElementById("mycanvas2"); 
+            var processingInstance = new Processing(canvas2, sketchProc);
+            </script>
+
+
+
+        </div>
+        </div>   
             
         </div>
         </body>
