@@ -29,6 +29,9 @@ li, td{
 #scratch-games h2 {
     text-align:left;
 }
+#javascript-games {
+    padding-top:25px
+}
 #cap2 {
     padding-top:25px;
     clear:both;
@@ -52,7 +55,7 @@ li, td{
     width: 215px;
     font-weight: bold;
     color: #FFFFFF;
-    background-color: #d20117;
+    background-color: #D20117;
     text-align: center;
     padding: 4px;
     text-decoration: none;
