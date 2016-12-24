@@ -2,16 +2,16 @@ body {
     padding-top:20px;
 }
 
-nav-bar {
+/*nav-bar {
     position: fixed;
     top: 0;
     text-align:center;
-}
+}*/
 
-div{
-    /*border:solid;*/
-    /*clear:both;*/
-}
+/*div{
+    border:solid;
+    clear:both;
+}*/
 
 li, td{
     font-family: 'Sansita One', cursive;
@@ -39,12 +39,17 @@ li, td{
 
 #nav-bar ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 40px;
+    padding: 10px;
     overflow: auto;
 }
 
-
+#mainNav-Bar {
+    padding-left:40px;
+    width: 100px;
+}
 
 #nav-bar li {
     float: left;
@@ -88,7 +93,7 @@ body {
 }
  .main-container {
     background: url("http://www.publicdomainpictures.net/pictures/70000/velka/aged-and-glowing-gold.jpg");
-    max-width: 900px;
+    max-width: 1000px;
     margin:auto;
     padding: 10px;
     overflow: auto;
