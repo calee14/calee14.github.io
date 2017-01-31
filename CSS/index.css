@@ -85,14 +85,14 @@ h1 {
 }
 
 body {
-    background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2016/01/iron-man-wallpaper-4.jpg") no-repeat center center fixed; 
+    background: url("../Images/ironmanWall.JPG") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; 
 }
  .main-container {
-    background: url("http://www.publicdomainpictures.net/pictures/70000/velka/aged-and-glowing-gold.jpg");
+    background: url("../Images/goldWall.JPG");
     max-width: 1000px;
     margin:auto;
     padding: 10px;
