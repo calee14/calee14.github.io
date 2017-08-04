@@ -1,0 +1,145 @@
+body {
+    padding-top:20px;
+}
+
+/*nav-bar {
+    position: fixed;
+    top: 0;
+    text-align:center;
+}*/
+
+/*div{
+    border:solid;
+    clear:both;
+}*/
+
+li, td{
+    font-family: 'Sansita One', cursive;
+}
+
+/*#cap{*/
+/*    border:solid;*/
+/*}*/
+/*#nav-bar{*/
+/*    border:solid;*/
+/*}*/
+/*#cap1 {*/
+/*    border:solid;*/
+/*}*/
+#scratch-games h2 {
+    text-align:left;
+}
+#javascript-games h2 {
+    padding-top:25px
+}
+#cap2 {
+    padding-top:25px;
+    clear:both;
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 40px;
+    padding: 10px;
+    overflow: auto;
+}
+
+#mainNav-Bar {
+    padding-left:40px;
+    width: 100px;
+}
+
+#nav-bar li {
+    float: left;
+}
+
+#nav-bar a:link, #nav-bar a:visited {
+    display: block;
+    width: 215px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #D20117;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav-bar a:hover , #nav-bar active {
+    background-color: #DAA520;
+}
+p {
+    font-family: 'Bangers', cursive;  
+}
+h2, h3 {
+    font-family: 'Bangers', cursive;
+    text-shadow: 2px 2px 2px Lightsteelblue;
+}
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 44px;
+    text-shadow: 2px 2px 2px Lightsteelblue;
+    text-transform: uppercase;
+}
+
+body {
+    background: url("../Images/ironmanWall.JPG") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+ .main-container {
+    background: url("../Images/goldWall.JPG");
+    max-width: 1000px;
+    margin:auto;
+    padding: 10px;
+    overflow: auto;
+ }
+ .container {
+    width:100%; 
+ }
+ 
+ .row {
+    clear:both;
+    padding-top:10px;
+    padding-bottom:10px;
+ }
+ .row2 {
+    clear:both;
+    padding-top:10px;
+    padding-bottom:10px;
+ }
+ .row3 {
+     clear:both;
+     padding-top:10px;
+     padding-bottom:10px;
+ }
+ 
+ .one-half {
+    width: 50%;
+    float:left;
+ }
+.one-third {
+    width: 33%;
+    float: left;
+}
+
+.one-fourth {
+    width: 25%;
+    float: left;
+}
+
+.gallery {
+    max-width:780px; 
+    margin:auto;
+}
+img.features {
+    width: 80%;
+}
+img.thumbnails {
+    
+    width:20%;
+}
