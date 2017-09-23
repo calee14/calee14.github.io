@@ -1,0 +1,55 @@
+body {
+    /*background: #ccc;*/
+    margin: 0px;
+    padding: 0px;
+}
+
+/*FOR TESTING PURPOSES*/
+div {
+    border: solid;
+    clear:both;
+}
+
+ul {
+    border: solid;
+}
+
+li {
+    border: solid;
+}
+a {
+    border: solid;
+}
+
+/*HEADER*/
+.header {
+    position: fixed;
+    width: 100%;
+    padding-top: 0px;
+    margin-left: 0px;
+    top: 0;
+    /*padding-bottom: 0px;*/
+    margin: auto
+    border: solid;
+    border-color: red;
+    background-color: blue
+}
+
+/*HEADER UL*/
+#header-bar ul {
+    /*border: solid;
+    border-color: red;*/
+    list-style-type: none;
+    margin: auto;
+    overflow: auto;
+    padding-left: 0px;
+
+}
+
+#header-bar li {
+    height: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/*END OF HEADER*/
+

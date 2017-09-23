@@ -1,0 +1,165 @@
+body {
+	/*padding-top: 20px;*/
+	margin: 0px;
+	padding: 0px;
+	/*border: solid;
+	border-color: blue;*/
+	/*overflow: scroll;*/
+}
+
+
+/*FOR TESTING PURPOSES*/
+/*div {
+	border: solid;
+	clear:both;
+}
+
+ul {
+	border: solid;
+}
+
+li {
+	border: solid;
+}
+a {
+	border: solid;
+}*/
+/* NAV BAR CSS*/
+
+/*HEADER*/
+.header {
+	position: fixed;
+	width: 100%;
+	padding-top: 0px;
+	top: 0;
+	/*padding-bottom: 0px;*/
+	margin: auto
+	border: solid;
+	border-color: red;
+	background-color: blue
+}
+
+/*HEADER UL*/
+#header-bar ul {
+	/*border: solid;
+	border-color: red;*/
+	list-style-type: none;
+	margin: auto;
+    overflow: auto;
+    padding-left: 0px;
+
+}
+
+#header-bar li {
+	height: 50px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+/*END OF HEADER*/
+
+/*THE CONTAINER OF THE NODES BARS IN NAVBAR*/
+#nav-bar ul {
+	list-style-type: none;
+    margin-bottom: auto;
+    margin-top: auto;
+    /*margin-left: auto;*/
+    overflow: hidden;
+    padding-right: 25%;
+    padding-left: 25%;
+}
+
+/*THE BARS IN NAVBAR*/
+#nav-bar li {
+	display: block;
+	width: 100%;
+	background-color: white;
+	border: solid;
+	border-color: red;
+	/* TO PREVENT SCROLLING IN THE DIV */
+	/*overflow-y: hidden;*/  /*hide vertical*/
+	/*overflow-x: hidden;*/ /*hide horizontal*/
+}
+
+/*THE MAIN NAVBAR*/
+.mainNav-bar {
+	/*position: fixed;*/
+	/*overflow: hidden;*/
+	/*FOR THE FIXED HEADER BAR*/
+	margin-top: 30px;
+	width: 100%;
+	border: solid;
+	border-color: red;
+	padding-top: 10px;
+
+}
+
+/*THE LINKS & TEXT FOR THE BARS IN NAVBAR*/
+/*#nav-bar a:link, #nav-bar a:visited {
+    display: block;
+  	width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 75px;
+    color: black;*/
+    /*background-color: #D20117;*/
+    /*text-align: left;*/
+   /* padding-left: 50px;*/
+    /*text-decoration: none;
+    text-transform: uppercase;
+}*/
+
+/*End Of Nav Bar CSS*/
+
+/*CSS FOR THE CATEGORIES IN THE NAV BAR*/
+.category-holder {
+	padding: 10px;
+	overflow: hidden;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: yellow;
+}
+/*The heading for the category box*/
+.info-heading {
+	width: 40%;
+	margin: 0px;
+	float: left;
+}
+
+.info-heading h2 {
+	font-size: 30px;
+	margin: 5px;
+}
+/*When the user clicks the link or when the link was visited*/
+.info-heading a:link, .info-heading a:visited {
+	display:  block;
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+}
+
+.info-heading a:hover {
+	/*Transition CSS*/
+	/*Turns text blue at a rate of 1s*/
+	color: blue;
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+    /*Text Decoration*/
+    text-decoration: underline;
+
+}
+/*The informational text of the category*/
+.info-text  {
+	float: right;
+	width: 60%;
+}
+/*The image in the category*/
+.info-image {
+	float: left;
+}
+/*END OF THE CATEGORIES IN THE NAV BAR CSS*/
