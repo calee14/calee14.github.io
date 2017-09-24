@@ -53,3 +53,35 @@ a {
 }
 /*END OF HEADER*/
 
+/*CAREER HOLDER*/
+.career-holder {
+    background-color: green; /* for vizualization purposes */
+    text-align: center;
+}
+/*TEXT HOLDER*/
+.text-holder {
+    background-color: red; /* for vizualization purposes */
+    display: inline-block;
+    padding: 10px;
+}
+
+/*TEXT HOLDER HEADER*/
+.text-holder h3 {
+    text-align: left;
+}
+/*TEXT HOLDER PARAGRAPH*/
+.text-holder p {
+    width: 500px;
+    text-align: left;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    /*border-bottom: 3px solid #777;*/
+    max-height:200px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    content: "";
+    background: -webkit-linear-gradient(#000, #fff);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+/*END OF TEXT HOLDER*/
