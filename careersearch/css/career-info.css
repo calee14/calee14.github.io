@@ -1,0 +1,244 @@
+body {
+    /*background: #ccc;*/
+    margin: 0px;
+    padding: 0px;
+}
+
+/*FOR TESTING PURPOSES*/
+/*div {
+    border: solid;
+    clear:both;
+}
+
+ul {
+    border: solid;
+}
+
+li {
+    border: solid;
+}
+a {
+    border: solid;
+}
+h6 {
+    boder:solid;
+}*/
+
+/*HEADER*/
+.header {
+    /*POSITION*/
+    position: fixed;
+    /*DIMENSION*/
+    width: 100%;
+    /*PADDING*/
+    padding-top: 0px;
+    /*DISTANCE FROM TOP*/
+    top: 0px; 
+    /*MARGIN*/
+    margin-left: 0px;
+    margin: auto
+    /*BORDER*/
+    border: solid;
+    /*COLOR*/
+    border-color: red;
+    background-color: blue
+}
+
+/*HEADER UL*/
+#header-bar ul {
+    /*border: solid;
+    border-color: red;*/
+    /*LIST STYLE*/
+    list-style-type: none;
+    /*MARGIN*/
+    margin: auto;
+    /*OVERFLOW*/
+    overflow: auto;
+    /*PADDING*/
+    padding-left: 0px;
+
+}
+/*HEADER LIST ITEMS*/
+#header-bar li {
+    /*DIMENSIONS*/
+    height: 50px;
+    /*MARGIN*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/*END OF HEADER*/
+
+/*MAIN CONTAINER*/
+.main {
+    /*overflow: auto;*/
+    clear: both;
+    /*BACKGROUND COLOR*/
+    background-color: orange;
+    /*height: 1000px;*/
+}
+
+/*CAREER TITLE*/
+.career-title {
+    float: left;
+    display: inline-table;
+}
+
+/*INFO TABS*/
+.tab-menu {
+    /*DIMENSION*/
+    width: 100%;
+    /*PADDING*/
+    padding: 0px;
+    /*MAGIN*/
+    margin: auto;
+}
+
+/*TAB*/
+.tab {
+
+}
+
+/*INFO FOR THE TAB*/
+.info {
+
+}
+/*SET TUP LAYOUT OF LIST*/
+#tabs ul {
+    /*LIST STYLE*/
+    list-style-type: none;
+    /*MARGIN*/
+    margin: auto;
+    /*OVERFLOW*/
+    overflow: auto;
+    /*PADDING*/
+    padding-left: 0px;
+}
+
+/*FLOAT LI LEFT*/
+#tabs li {
+    float: left;
+    /*BLOCK STYLE LI*/
+    display: block;
+    /*DIMENSIONS*/
+    width: 100px;
+    /*PADDING*/
+    padding: 4px;
+    /*FONT*/
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    /*TEXT COLOR*/
+    color: blue;
+}
+
+/*STYLE FOR THE CONTENT IN THE LI */
+#tabs a:link, #tabs a:visited {
+    /*BLOCK STYLE LI*/
+    display: block;
+    /*DIMENSIONS*/
+    width: 100px;
+    /*PADDING*/
+    padding: 4px;
+    /*FONT*/
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    /*TEXT COLOR*/
+    color: blue;
+    
+}
+/*#tabs a:hover, #tabs active {*/
+    /*HOVER OR ACTIVE*/
+    /*background-color: red;*/
+/*}*/
+
+/*INFO TABS LIST*/
+
+/*CONTAINER CAREER PARAGRAPH */
+.container-career-info {
+    /*BACKGROUND*/
+    background-color: yellow;
+    clear: both;
+    content: "";
+    /*DISPLAY*/
+    display: table;
+    /*DIMENSIONS*/
+    width: 800px;
+    /*MARGIN*/
+    margin: auto;
+
+    /*height: 500px;*/
+}
+/*FLOAT TO THE LEFT*/
+.toTheLeft {
+    /*FLOAT*/
+    float: left;
+}
+/*FLOAT TO THE RIGHT*/
+.toTheRight {
+    /*FLOAT*/
+    float: right;
+}
+
+/*PARAGRAPH-CONTAINER*/
+.paragraph-container {
+    /*margin: auto;*/
+    /*overflow: auto;*/
+    /*BACKGROUND COLOR*/
+    background-color: red;
+    /*mar-left: 30%;*/
+    /*margin-left: 30%;
+    margin-right: 30%;*/
+    /*DIMENSIONS*/
+    width: 500px;
+    /*TEXT*/
+    text-align: left;
+    /*PADDING*/
+    padding-right: 100px;
+    padding-left: 50px;
+}
+
+/*MORE INTEREST LIST*/
+.container-more-interest {
+    /*DIMENSIONS*/
+    width: 100px;
+    /*PADDING*/
+    padding-left: 25px; 
+    padding-right: 25px;
+    /*BACKGROUND COLOR*/
+    background-color: green;
+}
+/*MORE INTEREST TAB*/
+.morecareers {
+    /*PADDING*/
+    padding: 5px;
+    /*MARGIN*/
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    /*height: 100px;*/
+    /*DIMENSIONS*/
+    width: 90px;
+    /*BACKGROUND COLOR*/
+    background-color: purple;
+    /*TEXT*/
+    text-align: center;
+}
+/*MORE INTEREST TAB IMAGE*/
+.morecareers img {
+    /*MARGIN*/
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    /*DIMENSIONS*/
+    height: 80px;
+    width: 80px;
+}
+/*MORE INTEREST TAB HEADER*/
+.morecareers h6 {
+    /*MARGIN*/
+    margin: 0px;
+}

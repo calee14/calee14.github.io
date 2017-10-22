@@ -69,19 +69,24 @@ a {
 .text-holder h3 {
     text-align: left;
 }
-/*TEXT HOLDER PARAGRAPH*/
+/*TEXT HOLDER PARAGRAPH POSITIONING EDIT HOW <p> should look like*/
 .text-holder p {
     width: 500px;
-    text-align: left;
     margin-bottom: 5px;
     padding-bottom: 5px;
-    /*border-bottom: 3px solid #777;*/
     max-height:200px;
-    overflow:hidden;
+    overflow: hidden;
+}
+.more-info-text {
+    text-align: left;
+}
+/*TEXT HOLDER PARAGRAPH FONTS: EDIT: TEXT DESGIN*/
+.text-paragraph {
+    text-align: left;
     text-overflow: ellipsis;
-    content: "";
-    background: -webkit-linear-gradient(#000, #fff);
+    /*content: "";*/
+    /*background: -webkit-linear-gradient(#000, #fff);
    -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+   -webkit-text-fill-color: transparent;*/
 }
 /*END OF TEXT HOLDER*/
