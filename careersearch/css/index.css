@@ -64,8 +64,8 @@ a {
 /*THE CONTAINER OF THE NODES BARS IN NAVBAR*/
 #nav-bar ul {
 	list-style-type: none;
-    margin-bottom: auto;
-    margin-top: auto;
+    margin: auto;
+    margin: auto;
     /*margin-left: auto;*/
     overflow: hidden;
     padding-right: 25%;
