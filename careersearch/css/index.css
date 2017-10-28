@@ -61,23 +61,23 @@ a {
 }
 /*END OF HEADER*/
 
+#nav-bar {
+	width: 100%;
+}
 /*THE CONTAINER OF THE NODES BARS IN NAVBAR*/
 #nav-bar ul {
 	list-style-type: none;
     margin: auto;
-    margin: auto;
     /*margin-left: auto;*/
     overflow: hidden;
-    padding-right: 25%;
-    padding-left: 25%;
+    /*  padding-right: 25%;
+    padding-left: 25%;*/
 }
 
 /*THE BARS IN NAVBAR*/
 #nav-bar li {
 	/*DISPLAY*/
 	/*display: block;*/
-	/*DIMENSIONS*/
-	width: 626px;
 	/*BACKGROUND COLOR*/
 	background-color: #FFFBFA;
 	/*BORDER*/
@@ -116,6 +116,9 @@ a {
 
 /*CSS FOR THE CATEGORIES IN THE NAV BAR*/
 .category-holder {
+	/*MARGIN*/
+	margin: auto;
+	width: 626px;
 	/*PADDING*/
 	padding: 10px;
 	/*OVERFLOW*/
