@@ -67,7 +67,7 @@ a {
 /*THE CONTAINER OF THE NODES BARS IN NAVBAR*/
 #nav-bar ul {
 	list-style-type: none;
-    margin: auto;
+    /*margin: auto;*/
     /*margin-left: auto;*/
     overflow: hidden;
     /*  padding-right: 25%;
@@ -79,7 +79,7 @@ a {
 	/*DISPLAY*/
 	/*display: block;*/
 	/*BACKGROUND COLOR*/
-	background-color: #FFFBFA;
+	/*background-color: #FFFBFA;*/
 	/*BORDER*/
 	/* TO PREVENT SCROLLING IN THE DIV */
 	/*overflow-y: hidden;*/  /*hide vertical*/
