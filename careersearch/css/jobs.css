@@ -2,10 +2,12 @@ body {
     /*background: #ccc;*/
     margin: 0px;
     padding: 0px;
+    /*BACKGROUND COLOR*/
+    background-color: #FFF8F4;
 }
 
 /*FOR TESTING PURPOSES*/
-div {
+/*div {
     border: solid;
     clear:both;
 }
@@ -19,7 +21,7 @@ li {
 }
 a {
     border: solid;
-}
+}*/
 
 /*HEADER*/
 .header {
@@ -30,9 +32,10 @@ a {
     top: 0;
     /*padding-bottom: 0px;*/
     margin: auto
-    border: solid;
-    border-color: red;
-    background-color: blue
+    /*BACKGROUND COLOR*/
+    background-color: #FFFFFF;
+    /*SHADOW*/
+    box-shadow: 0px 5px 5px #888888;
 }
 
 /*HEADER UL*/
@@ -56,12 +59,20 @@ a {
 /*CAREER HOLDER*/
 .career-holder {
     background-color: green; /* for vizualization purposes */
+    margin-right: 25%;
+    margin-left: 25%;
+    border: solid;
     text-align: center;
+}
+
+.category-shadow {
+    box-shadow: 0px 0px 10px #888888;
 }
 /*TEXT HOLDER*/
 .text-holder {
     background-color: red; /* for vizualization purposes */
     display: inline-block;
+    margin: auto;
     padding: 10px;
 }
 
@@ -72,8 +83,8 @@ a {
 /*TEXT HOLDER PARAGRAPH POSITIONING EDIT HOW <p> should look like*/
 .text-holder p {
     width: 500px;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
+    /*margin-bottom: 5px;
+    padding-bottom: 5px;*/
     max-height:200px;
     overflow: hidden;
 }
