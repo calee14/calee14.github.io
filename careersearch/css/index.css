@@ -9,7 +9,6 @@ body {
 	/*overflow: scroll;*/
 }
 
-
 /*FOR TESTING PURPOSES*/
 /*div {
 	border: solid;
@@ -91,7 +90,6 @@ a {
 	/*position: fixed;*/
 	/*overflow: hidden;*/
 	/*FOR THE FIXED HEADER BAR*/
-	margin-top: 30px;
 	width: 100%;
 	padding-top: 10px;
 
@@ -126,7 +124,7 @@ a {
 	/*MARGIN*/
 	margin-top: 7px;
 	margin-bottom: 7px;
-	/*BACKGROUN COLOR*/
+	/*BACKGROUND COLOR*/
 	background-color: #FFF;
 	border-radius: 2px;
 	box-shadow: 0px 0px 5px #888888;
@@ -134,6 +132,11 @@ a {
 
 .category-shadow {
 	box-shadow: 0px 0px 10px #888888;
+}
+
+.category-holder h3 {
+	color: #44A0FF;
+	text-decoration-color: #44A0FF;
 }
 
 /*The heading for the category box*/
@@ -147,7 +150,8 @@ a {
 	font-size: 30px;
 	margin: 5px;
 }
-/*When the user clicks the link or when the link was visited*/
+
+/*WHEN THE USER CLICKS THE LINK OF WHEN THE LINK WAS VISITED*/
 .info-heading a:link, .info-heading a:visited {
 	display:  block;
 	width: 100%;
@@ -158,10 +162,11 @@ a {
 	color: black;
 }
 
+/*WHEN THE USER HOVERS OVER THE LINK*/
 .info-heading a:hover {
 	/*Transition CSS*/
 	/*Turns text blue at a rate of 1s*/
-	color: blue;
+	color: #44A0FF;
     -webkit-transition: color 1s;
     -moz-transition:    color 1s;
     -ms-transition:     color 1s;
@@ -171,12 +176,14 @@ a {
     text-decoration: underline;
 
 }
-/*The informational text of the category*/
+
+/*THE INFORMATIONAL TEXT OF THE CATEGORY*/
 .info-text  {
 	float: right;
 	width: 60%;
 }
 /*The image in the category*/
+/*THE IMAGE IN THE CATEGORY*/
 .info-image {
 	float: left;
 }
